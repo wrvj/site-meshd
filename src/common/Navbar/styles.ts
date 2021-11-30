@@ -7,15 +7,23 @@ export const NavbarContainer = styled("nav")`
 
   .content {
     display: flex;
+    flex: initial;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.8);
+
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
       -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(10px);
       background-color: rgba(0, 0, 0, 0.75);
     }
 
+    .logo-and-hamburger {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
     .logoLink {
       line-height: 1;
     }
@@ -38,6 +46,9 @@ export const NavbarContainer = styled("nav")`
       margin: 0px 24px;
       transition: width 1s;
     }
+    .hamburger.hide {
+      display: none;
+    }
 
     ul {
       display: flex;
@@ -48,18 +59,34 @@ export const NavbarContainer = styled("nav")`
           text-decoration: none;
           font-weight: 500;
           font-size: 18px;
+          padding: 0;
         }
         margin-right: 36px;
       }
     }
     @media only screen and (max-width: 768px) {
+      flex-direction: column;
       .hamburger {
         display: flex;
         width: 40px;
         height: 40px;
       }
-      ul {
-        display: none;
+      ul.closed {
+        max-height: 0px;
+        overflow: hidden;
+        li {
+          padding: 0;
+        }
+      }
+      ul.opened {
+        display: flex;
+        flex-direction: column;
+        max-height: 5000px;
+        li {
+          width: 100%;
+          padding: 12px;
+          text-align: center;
+        }
       }
     }
   }
