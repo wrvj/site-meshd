@@ -8,7 +8,8 @@ export const HomeContainer = styled("div")`
   .hero {
     display: flex;
     align-items: center;
-    padding: 5rem;
+    justify-content: flex-start;
+    max-width: 1440px;
     font-family: "IBM Plex Sans", sans-serif;
     color: white;
     font-size: 4rem;
@@ -22,7 +23,7 @@ export const HomeContainer = styled("div")`
     /* overflow: hidden; */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
   }
 
@@ -43,30 +44,133 @@ export const HomeContainer = styled("div")`
 
   .video-container {
     z-index: -999999;
+
     position: absolute;
     width: 100%;
+    clip-path: url(#svgPath);
+    -webkit-clip-path: url(#svgPath);
     top: 0;
     height: 90vh;
+
     overflow: hidden;
   }
 
-  .first-section {
+  .about-section {
+    width: 100%;
+    margin-top: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .wraper {
+      display: flex;
+      max-width: 1440px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .mission-section {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .wraper {
+      display: flex;
+      flex-direction: column;
+      max-width: 1440px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 3rem;
+        color: whitesmoke;
+      }
+      h2 {
+        font-size: 2rem;
+        color: whitesmoke;
+      }
+    }
+  }
+
+  .services-section {
+    z-index: -1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/images/teste_service.jpg');
+    background-size: cover;
+    clip-path: url(#svgPath2);
+    -webkit-clip-path: url(#svgPath2);
+    min-height: 90vh;
+
+
+    .wraper {
+      display: flex;
+      max-width: 90%;
+      margin: 10rem 0;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .gallery-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 3rem;
 
-    .card {
+    .card-1 {
+      padding: 1rem;
+      background: #fafafa;
       border-radius: 15px;
       width: 100%;
       max-width: 1080px;
-      height: 1920px;
 
-      margin-top: -6rem;
+      margin-top: -4rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .quote-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    
+    .wraper {
+      max-width: 1440px;
+      h1{
+        font-size: 3rem;
+        color: tomato;
+      }
+    }
+  }
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    
+    .wraper {
+      max-width: 1440px;
+      h1{
+        font-size: 3rem;
+        color: tomato;
+      }
     }
   }
 `;

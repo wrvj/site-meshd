@@ -13,7 +13,7 @@ export default function Footer () {
             alt="Logo"
           />
         </Link>
-        <p>2021, Meshd, LLC.</p>
+        <p>2018 Meshd, LLC. All Rights Reserved.</p>
 
         <ul className="nav-footer">
           <li>

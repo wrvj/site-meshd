@@ -22,7 +22,7 @@ export const FooterContainer = styled("footer")`
         padding: 0;
       }
       margin: 0px 36px;
-      margin-top: 4rem;
+      margin-top: 5rem;
     }
   }
 `;
