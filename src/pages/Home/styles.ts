@@ -47,8 +47,8 @@ export const HomeContainer = styled("div")`
 
     position: absolute;
     width: 100%;
-    clip-path: url(#svgPath);
-    -webkit-clip-path: url(#svgPath);
+    /* clip-path: url(#svgPath);
+    -webkit-clip-path: url(#svgPath); */
     top: 0;
     height: 90vh;
 
@@ -103,8 +103,8 @@ export const HomeContainer = styled("div")`
     justify-content: center;
     background: url('/images/teste_service.jpg');
     background-size: cover;
-    clip-path: url(#svgPath2);
-    -webkit-clip-path: url(#svgPath2);
+    /* clip-path: url(#svgPath2);
+    -webkit-clip-path: url(#svgPath2); */
     min-height: 90vh;
 
 
@@ -164,12 +164,14 @@ export const HomeContainer = styled("div")`
     align-items: center;
     justify-content: center;
     padding: 3rem;
+
+    background: linear-gradient(#41BA91, #309A76);
     
     .wraper {
       max-width: 1440px;
       h1{
         font-size: 3rem;
-        color: tomato;
+        color: white;
       }
     }
   }

@@ -3,6 +3,7 @@ import { styled } from "@mui/system";
 export const NavbarContainer = styled("nav")`
   z-index: 10000;
   position: fixed;
+  top: 0;
   width: 100%;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
 

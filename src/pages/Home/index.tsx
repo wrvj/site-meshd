@@ -5,6 +5,7 @@ import ImageGallery from "../../common/Gallery";
 import CardInfo from "../../common/CardInfo";
 import CardService from "../../common/CardService";
 import Button from "@mui/material/Button";
+import ServicesCarousel from "../../ServicesCarousel";
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -92,13 +93,16 @@ export default function Home() {
       </section>
 
       {/* Our services Carrousell */}
-      <section
+      <ServicesCarousel sx={{
+          transform: `translate3d(0px, ${-200 + scrollPosition / 6}px, 0px)`,
+        }}/>
+      {/* <section
         className="services-section"
         style={{
           transform: `translate3d(0px, ${-200 + scrollPosition / 6}px, 0px)`,
         }}
-      >
-        <div className="wraper">
+      > */}
+        {/* <div className="wraper">
           <CardService
             title="Product Viz/ Digital Prototyping"
             body="Digital Prototyping gives conceptual design, engineering, manufacturing, and sales and marketing departments the ability to virtually explore a complete product before it's built."
@@ -124,11 +128,11 @@ export default function Home() {
             body="3D animation and CGI is the art of using computer generated graphics to bring characters, vehicles, props, and more to life within TV shows, films, and games. Meshd provides you the resources needed to bring your projects to life!"
             button="More"
           />
-        </div>
-      </section>
+        </div> */}
+      {/* </section> */}
 
       {/* Our gallery Carrousell */}
-      <section className="gallery-section">
+      <section className="gallery-section" style={{zIndex: 10}}>
         <Card className="card-1">
           <h1>See some more of our projects</h1>
           <ImageGallery />
@@ -148,7 +152,7 @@ export default function Home() {
       {/* Our Quote contact form */}
       <section className="quote-section">
         <div className="wraper">
-          <Card sx={{padding: "3rem"}}>
+          <Card sx={{ padding: "3rem" }}>
             <h1>Get a quote now!</h1>
             <h2>Formulario de orçamento</h2>
             <h2>Formulario de orçamento</h2>
@@ -174,7 +178,7 @@ export default function Home() {
           <h2>Formulario de contato</h2>
           <h2>Formulario de contato</h2>
           <h2>Formulario de contato</h2>
-          <Button variant="contained" sx={{ width: "100%" }}>
+          <Button variant="outlined" sx={{ width: "100%", color: "white" }}>
             Send
           </Button>
         </div>
