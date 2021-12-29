@@ -3,41 +3,36 @@ import { CardExpansivelContainer } from "./styles";
 
 const cards = [
   {
+    index: 1,
     imgUrl: "",
-    title: "DevOps engineers",
-    body: "Help engineers be more efficient and streamline knowledge sharing using a tool they already love and trust.",
+    title: "Product Rendering",
+    body: "Good product visualization demands that we work as virtual photographers and light the products as if they were present in a physical studio. However, using 3D we have the liberty to cheat physical restrictions when we want to go beyond the real world.",
   },
   {
+    index: 2,
     imgUrl: "",
-    title: "Data scientists",
-    body: "Business decisions are better when backed by data. Give visibility to the data that support your strategies.",
+    title: "Architecture Vizualization",
+    body: "Like any other art form, architectural visualization has the power to move your audience, whether it be the design client, potential customers, or future tenants.",
   },
   {
+    index: 3,
     imgUrl: "",
-    title: "Software engineers",
-    body: "Shipping new products and features requires teamwork and coordination. Forget checklists and long docs no one ever reads.",
-  },
-  {
-    imgUrl: "",
-    title: "Support teams",
-    body: "Level up your support by providing information to your customers using a natural interface: questions and answers.",
-  },
-  {
-    imgUrl: "",
-    title: "Engineering leaders",
-    body: "Help your team get the information they need to do their job - reduce burnout and help engineers grow and learn together.",
+    title: "Game Assets",
+    body: "Creating 3D models of characters, environments, weapons, and objects is the first step in bringing any 3D game to life. We work with a wide range of the latest 3D software and use both traditional and PBR methods to achieve high-quality results for maximum appeal.",
   },
 ];
 
 function CardExpansivo(props: any) {
-  const [open, setOpen] = useState("closed");
+  const { openedCard, cardIndex, setOpen } = props;
 
   return (
     <div
-      className={`card-expansivel card-expansivel-${open}`}
+      className={`card-expansivel card-expansivel-${
+        openedCard === cardIndex ? "opened" : "closed"
+      }`}
       onClick={() => {
-        //alert("Been clicked")
-        setOpen(open === "closed" ? "opened" : "closed");
+        if (openedCard === cardIndex) setOpen(0);
+        else setOpen(cardIndex)
       }}
     >
       <div className="image-card"></div>
@@ -52,11 +47,19 @@ function CardExpansivo(props: any) {
 }
 
 export default function ServicesCarousel(props: any) {
+  const [openedCard, setOpenedCard] = useState(0);
+
   return (
-    <div style={{...props.sx}}>
+    <div style={{ ...props.sx }}>
       <CardExpansivelContainer>
         {cards.map((e: any) => (
-          <CardExpansivo title={e.title} body={e.body} />
+          <CardExpansivo
+            title={e.title}
+            body={e.body}
+            cardIndex={e.index}
+            openedCard={openedCard}
+            setOpen={setOpenedCard}
+          />
         ))}
       </CardExpansivelContainer>
     </div>

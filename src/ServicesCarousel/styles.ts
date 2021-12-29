@@ -23,11 +23,12 @@ export const CardExpansivelContainer = styled("div")`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(30, 30, 30, 0.25);
+    background: rgba(30, 30, 30, 0.5);
 
     margin: 15px;
-    width: 180px;
+    width: 220px;
     height: 280px;
+    padding: 15px;
 
     border-radius: 10px;
 

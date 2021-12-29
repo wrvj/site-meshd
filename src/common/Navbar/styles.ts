@@ -1,24 +1,33 @@
 import { styled } from "@mui/system";
+import { MeshdTheme } from "../../Theme";
 
 export const NavbarContainer = styled("nav")`
   z-index: 10000;
   position: fixed;
   top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
   width: 100%;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
-
+  
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
+    //background-color: rgba(0, 0, 0, 0.75);
+  }
   .content {
     display: flex;
     flex: initial;
+    flex-grow: 1;
+    max-width: 1200px;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.8);
+    
+    height: ${MeshdTheme.dimensions.navBarHeight};
 
-    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(10px);
-      background-color: rgba(0, 0, 0, 0.75);
-    }
 
     .logo-and-hamburger {
       display: flex;
@@ -56,18 +65,29 @@ export const NavbarContainer = styled("nav")`
       display: flex;
 
       li {
+        margin-right: 60px;
         .link {
-          color: #eee;
+          background: #fff; 
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
           text-decoration: none;
           font-weight: 500;
           font-size: 18px;
           padding: 0;
         }
-        margin-right: 36px;
+
+        .link:hover {
+          background: linear-gradient(to right, ${MeshdTheme.colors.red}, ${MeshdTheme.colors.blue});
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
       }
     }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: ${MeshdTheme.breakpoints.tablet}) {
       flex-direction: column;
+      justify-content: center;
       .hamburger {
         display: flex;
         width: 40px;

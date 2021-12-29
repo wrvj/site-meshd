@@ -1,4 +1,5 @@
 import { styled } from "@mui/system";
+import { MeshdTheme } from "../../Theme";
 
 export const HomeContainer = styled("div")`
   display: flex;
@@ -57,7 +58,7 @@ export const HomeContainer = styled("div")`
 
   .about-section {
     width: 100%;
-    margin-top: 82vh;
+    /* margin-top: 82vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,31 +68,6 @@ export const HomeContainer = styled("div")`
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-    }
-  }
-
-  .mission-section {
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .wraper {
-      display: flex;
-      flex-direction: column;
-      max-width: 1440px;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-
-      h1 {
-        font-size: 3rem;
-        color: whitesmoke;
-      }
-      h2 {
-        font-size: 2rem;
-        color: whitesmoke;
-      }
     }
   }
 
@@ -103,8 +79,6 @@ export const HomeContainer = styled("div")`
     justify-content: center;
     background: url('/images/teste_service.jpg');
     background-size: cover;
-    /* clip-path: url(#svgPath2);
-    -webkit-clip-path: url(#svgPath2); */
     min-height: 90vh;
 
 
@@ -129,9 +103,8 @@ export const HomeContainer = styled("div")`
       background: #fafafa;
       border-radius: 15px;
       width: 100%;
-      max-width: 1080px;
+      max-width: ${MeshdTheme.dimensions.maxColumnWidth};
 
-      margin-top: -4rem;
       display: flex;
       flex-direction: column;
       align-items: center;
