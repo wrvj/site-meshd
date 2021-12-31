@@ -34,6 +34,7 @@ export const NavbarContainer = styled("nav")`
       width: 100%;
       align-items: center;
       justify-content: space-between;
+      
     }
     .logoLink {
       line-height: 1;
@@ -88,6 +89,7 @@ export const NavbarContainer = styled("nav")`
     @media only screen and (max-width: ${MeshdTheme.breakpoints.tablet}) {
       flex-direction: column;
       justify-content: center;
+      height: auto;
       .hamburger {
         display: flex;
         width: 40px;
@@ -104,6 +106,7 @@ export const NavbarContainer = styled("nav")`
         display: flex;
         flex-direction: column;
         max-height: 5000px;
+        
         li {
           width: 100%;
           padding: 12px;

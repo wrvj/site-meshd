@@ -10,7 +10,7 @@ export const FooterContainer = styled("footer")`
   color: #fff;
 
   .footer-top-divider {
-    height: 3px;
+    height: 4px;
     width: 100%;
     background: linear-gradient(to right, ${MeshdTheme.colors.green}, ${MeshdTheme.colors.red}, ${MeshdTheme.colors.blue})
   }
@@ -29,7 +29,6 @@ export const FooterContainer = styled("footer")`
         padding: 0;
       }
       margin: 0px 36px;
-
     }
   }
 

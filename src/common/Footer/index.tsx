@@ -41,7 +41,7 @@ export default function Footer() {
           </Link>
         </li>
       </ul>
-      <p>2018 Meshd, LLC. All Rights Reserved.</p>
+      <p>2021 Meshd, LLC. All Rights Reserved.</p>
     </FooterContainer>
   );
 }

@@ -2,12 +2,10 @@ import React, { useState, useEffect } from "react";
 import { HomeContainer } from "./styles";
 import Card from "@mui/material/Card";
 import ImageGallery from "../../common/Gallery";
-import CardInfo from "../../common/CardInfo";
-import CardService from "../../common/CardService";
-import Button from "@mui/material/Button";
 import ServicesCarousel from "../../ServicesCarousel";
 import AboutSection from "./About";
 import StatementSection from "./Statement";
+import QuoteForm from "../../common/QuoteForm";
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -46,6 +44,7 @@ export default function Home() {
         </div>
       </section>
 
+
       <AboutSection />
 
       {/* Our mission and catch phrase */}
@@ -54,7 +53,7 @@ export default function Home() {
       {/* Our services Carrousell */}
       <ServicesCarousel
         sx={{
-          transform: `translate3d(0px, ${scrollPosition / 6}px, 0px)`,
+          transform: `translate3d(0px, ${-200 + scrollPosition / 6}px, 0px)`,
         }}
       />
 
@@ -67,49 +66,18 @@ export default function Home() {
       </section>
 
       {/* Our mission and catch phrase */}
-      <section className="mission-section">
-        <div className="wraper">
-          <h1 className="mission-title">Like what you see?</h1>
-          <h2 className="mission-slug">
-            we will be happy to join you and your team in blablabla
+      <section style={{display: "flex", justifyContent: "center", alignContent: "center", width: "100%", height: "auto"}}>
+        <div style={{width: "1024px"}}>
+          <h1 style={{textAlign: "center"}}>Like what you see?</h1>
+          <h2 style={{textAlign: "center"}}>
+            we will be happy to join you and your team!
           </h2>
         </div>
       </section>
 
-      {/* Our Quote contact form */}
-      <section className="quote-section">
-        <div className="wraper">
-          <Card sx={{ padding: "3rem" }}>
-            <h1>Get a quote now!</h1>
-            <h2>Formulario de orçamento</h2>
-            <h2>Formulario de orçamento</h2>
-            <h2>Formulario de orçamento</h2>
-            <h2>Formulario de orçamento</h2>
-            <h2>Formulario de orçamento</h2>
-            <Button variant="contained" sx={{ width: "100%" }}>
-              Send
-            </Button>
-          </Card>
-        </div>
-      </section>
+      <QuoteForm/>
 
-      {/* Our general contact form */}
-      <section className="contact-section">
-        <div className="wraper">
-          <h1>
-            Or send us a message,
-            <br /> we will get in touch soon!
-          </h1>
-          <h2>Formulario de contato</h2>
-          <h2>Formulario de contato</h2>
-          <h2>Formulario de contato</h2>
-          <h2>Formulario de contato</h2>
-          <h2>Formulario de contato</h2>
-          <Button variant="outlined" sx={{ width: "100%", color: "white" }}>
-            Send
-          </Button>
-        </div>
-      </section>
+
     </HomeContainer>
   );
 }
