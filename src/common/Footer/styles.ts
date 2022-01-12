@@ -35,4 +35,14 @@ export const FooterContainer = styled("footer")`
   p {
     margin: 5rem;
   }
+
+  @media only screen and (max-width: ${MeshdTheme.breakpoints.tablet}) {
+    .nav-footer {
+      flex-direction: column;
+      align-items: center;
+      li{
+        margin: 15px 0;
+      }
+    }
+  }
 `;

@@ -23,6 +23,12 @@ export const AboutSectionContainer = styled("section")`
     }
   }
 
+  @media only screen and (max-width: ${MeshdTheme.breakpoints.tablet}) {
+    .sub-content{
+      flex-direction: column;
+    }
+  }
+
   .section-body {
     margin: -55px 1rem 0 1rem;
     color: ${MeshdTheme.colors.white};

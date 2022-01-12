@@ -5,6 +5,8 @@ export const NavbarContainer = styled("nav")`
   z-index: 10000;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -19,6 +21,7 @@ export const NavbarContainer = styled("nav")`
     //background-color: rgba(0, 0, 0, 0.75);
   }
   .content {
+    width: 100%;
     display: flex;
     flex: initial;
     flex-grow: 1;

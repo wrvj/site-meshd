@@ -20,6 +20,12 @@ const cards = [
     title: "Game Assets",
     body: "Creating 3D models of characters, environments, weapons, and objects is the first step in bringing any 3D game to life. We work with a wide range of the latest 3D software and use both traditional and PBR methods to achieve high-quality results for maximum appeal.",
   },
+  {
+    index: 4,
+    imgUrl: "",
+    title: "NFTs",
+    body: "NFTs are essentially digital certificates that confer ownership and authenticity to a physical or digital item. Add unique experiences to the mix and you redefine ownership. At Meshd, we can help build these experiences.",
+  },
 ];
 
 function CardExpansivo(props: any) {

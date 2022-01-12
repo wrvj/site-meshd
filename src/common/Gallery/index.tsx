@@ -5,13 +5,13 @@ import ImageListItemBar from "@mui/material/ImageListItemBar";
 export default function ImageGallery() {
   return (
     <div>
-      <ImageList variant="masonry" cols={3} gap={8}>
+      <ImageList variant="quilted" cols={2} gap={10}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              style={{borderRadius: "10px"}}
-              src={`${item.img}?w=1024&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=1024&fit=crop&auto=format&dpr=2 2x`}
+              style={{borderRadius: "8px"}}
+              src={`${item.img}`}
+              srcSet={`${item.img}`}
               alt={item.title}
               loading="lazy"
             />
@@ -25,51 +25,115 @@ export default function ImageGallery() {
 
 const itemData = [
   {
-    img: "https://images.unsplash.com/photo-1549388604-817d15aa0110",
-    title: "Bed",
+    img: "/images/gallery/cabinet_thumb.PNG",
+    title: "Cabinet",
   },
   {
-    img: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
-    title: "Books",
+    img: "/images/gallery/sofa.jpg",
+    title: "Sofa",
   },
   {
-    img: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
+    img: "/images/gallery/web_1.jpg",
+    title: "Car",
+  },
+  {
+    img: "/images/gallery/pause_chair.jpg",
+    title: "Car",
+  },
+  {
+    img: "/images/gallery/casa_exterior1.jpg",
+    title: "House 1",
+  },
+  {
+    img: "/images/gallery/casa_exterior2.jpg",
+    title: "House 2",
+  },
+  {
+    img: "/images/gallery/casa_exterior3.jpg",
+    title: "House 3",
+  },
+  {
+    img: "/images/gallery/pontiac1.jpg",
+    title: "Pontiac",
+  },
+  {
+    img: "/images/gallery/pontiac2.jpg",
+    title: "Pontiac",
+  },
+  {
+    img: "/images/gallery/pontiac3.jpg",
+    title: "Pontiac",
+  },
+  {
+    img: "/images/gallery/pontiac4.jpg",
+    title: "Pontiac",
+  },
+  {
+    img: "/images/gallery/caloi1.jpg",
+    title: "Bicycle",
+  },
+  {
+    img: "/images/gallery/caloi2.jpg",
+    title: "Bicycle",
+  },
+  {
+    img: "/images/gallery/caloi3.jpg",
+    title: "Bicycle",
+  },
+  {
+    img: "/images/gallery/caloi4.jpg",
+    title: "Bicycle",
+  },
+  {
+    img: "/images/gallery/caloi5.jpg",
+    title: "Bicycle",
+  },
+  {
+    img: "/images/gallery/caloi6.jpg",
+    title: "Bicycle",
+  },
+  {
+    img: "/images/gallery/sink1.jpg",
     title: "Sink",
   },
   {
-    img: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
-    title: "Kitchen",
+    img: "/images/gallery/sink2.jpg",
+    title: "Sink",
   },
   {
-    img: "https://images.unsplash.com/photo-1588436706487-9d55d73a39e3",
-    title: "Blinds",
+    img: "/images/gallery/sink3.jpg",
+    title: "Sink",
   },
   {
-    img: "https://images.unsplash.com/photo-1574180045827-681f8a1a9622",
-    title: "Chairs",
+    img: "/images/gallery/granola01.jpg",
+    title: "Granola",
   },
   {
-    img: "https://images.unsplash.com/photo-1530731141654-5993c3016c77",
-    title: "Laptop",
+    img: "/images/gallery/granola02.jpg",
+    title: "Granola",
   },
   {
-    img: "https://images.unsplash.com/photo-1481277542470-605612bd2d61",
-    title: "Doors",
+    img: "/images/gallery/ratazima1.png",
+    title: "Ratazima",
   },
   {
-    img: "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7",
-    title: "Coffee",
+    img: "/images/gallery/ratazima2.png",
+    title: "Ratazima",
   },
   {
-    img: "https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee",
-    title: "Storage",
+    img: "/images/gallery/nebula4k.jpg",
+    title: "Nebula",
   },
   {
-    img: "https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62",
-    title: "Candle",
+    img: "/images/gallery/gallery.jpg",
+    title: "Gallery",
   },
   {
-    img: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
-    title: "Coffee table",
+    img: "/images/gallery/interior01.jpg",
+    title: "Gallery",
+  },
+  {
+    img: "/images/gallery/interior02.jpg",
+    title: "Gallery",
   },
 ];

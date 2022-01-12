@@ -9,19 +9,25 @@ export const HomeContainer = styled("div")`
   .hero {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    max-width: 1440px;
+    width: 100%;
+    max-width: ${MeshdTheme.dimensions.maxColumnWidth};
     font-family: "IBM Plex Sans", sans-serif;
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1.2;
     flex-grow: 1;
+    margin-left: 30px;
+  }
+  @media only screen and (max-width: ${MeshdTheme.breakpoints.tablet}) {
+    .hero{
+      font-size: 2rem;
+    }
   }
 
   .heroContainer {
     height: 90vh;
     width: 100%;
-    /* overflow: hidden; */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,6 +57,8 @@ export const HomeContainer = styled("div")`
     /* clip-path: url(#svgPath);
     -webkit-clip-path: url(#svgPath); */
     top: 0;
+    left: 0;
+    right: 0;
     height: 90vh;
 
     overflow: hidden;

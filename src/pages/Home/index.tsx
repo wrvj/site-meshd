@@ -66,14 +66,14 @@ export default function Home() {
       </section>
 
       {/* Our mission and catch phrase */}
-      <section style={{display: "flex", justifyContent: "center", alignContent: "center", width: "100%", height: "auto"}}>
+      {/* <section style={{display: "flex", justifyContent: "center", alignContent: "center", width: "100%", height: "auto"}}>
         <div style={{width: "1024px"}}>
           <h1 style={{textAlign: "center"}}>Like what you see?</h1>
           <h2 style={{textAlign: "center"}}>
             we will be happy to join you and your team!
           </h2>
         </div>
-      </section>
+      </section> */}
 
       <QuoteForm/>
 

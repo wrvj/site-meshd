@@ -41,6 +41,11 @@ export default function Navbar() {
 
         <ul className={mobileMenu}>
           <li>
+            <Link className="link" to="/" onClick={closeMobileMenu}>
+              Home
+            </Link>
+          </li>
+          <li>
             <Link className="link" to="/about" onClick={closeMobileMenu}>
               Agency
             </Link>

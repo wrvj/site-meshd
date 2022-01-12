@@ -1,7 +1,11 @@
 import { styled } from "@mui/material/styles";
+import { MeshdTheme } from "../Theme";
 
 export const CardExpansivelContainer = styled("div")`
   display: flex;
+  @media only screen and (max-width: ${MeshdTheme.breakpoints.tablet}) {
+    flex-direction: column;
+  }
   width: 100%;
   height: 850px;
   background: url('/images/teste_service.jpg');
