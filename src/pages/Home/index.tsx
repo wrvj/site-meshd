@@ -1,28 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { HomeContainer } from "./styles";
-import Card from "@mui/material/Card";
 import ImageGallery from "../../common/Gallery";
 import ServicesCarousel from "../../ServicesCarousel";
 import AboutSection from "./About";
 import StatementSection from "./Statement";
 import QuoteForm from "../../common/QuoteForm";
+import HeroHome from "./Hero";
+import ContactForm from "../../common/ContactForm";
 
 export default function Home() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    setScrollPosition(window.pageYOffset);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const handleScroll = () => {
+        setScrollPosition(window.pageYOffset);
     };
-  }, []);
-  return (
-    <HomeContainer>
-      <section
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+    return (
+        <HomeContainer>
+            <HeroHome scrollPosition={scrollPosition} />
+            {/* <section
         className="heroContainer"
         style={{
           transform: `translate3d(0px, ${scrollPosition / 4}px, 0px)`,
@@ -41,32 +43,28 @@ export default function Home() {
           <h2>
             Making your <br /> perspective <span>shift</span>
           </h2>
+          <p>By designing concepts and solutions that stay true to our clients brand culture.</p>
         </div>
-      </section>
+      </section> */}
 
+            <AboutSection />
 
-      <AboutSection />
+            {/* Our mission and catch phrase */}
+            <StatementSection />
 
-      {/* Our mission and catch phrase */}
-      <StatementSection />
+            {/* Our services Carrousell */}
+            <ServicesCarousel
+                sx={{
+                    transform: `translate3d(0px,  ${-300 + scrollPosition / 6}px, 0px)`,
+                }}
+            />
 
-      {/* Our services Carrousell */}
-      <ServicesCarousel
-        sx={{
-          transform: `translate3d(0px, ${-200 + scrollPosition / 6}px, 0px)`,
-        }}
-      />
+            {/* Our gallery Carrousell */}
 
-      {/* Our gallery Carrousell */}
-      <section className="gallery-section" style={{ zIndex: 10 }}>
-        <Card className="card-1">
-          <h1>See some more of our projects</h1>
-          <ImageGallery />
-        </Card>
-      </section>
+            <ImageGallery />
 
-      {/* Our mission and catch phrase */}
-      {/* <section style={{display: "flex", justifyContent: "center", alignContent: "center", width: "100%", height: "auto"}}>
+            {/* Our mission and catch phrase */}
+            {/* <section style={{display: "flex", justifyContent: "center", alignContent: "center", width: "100%", height: "auto"}}>
         <div style={{width: "1024px"}}>
           <h1 style={{textAlign: "center"}}>Like what you see?</h1>
           <h2 style={{textAlign: "center"}}>
@@ -75,9 +73,8 @@ export default function Home() {
         </div>
       </section> */}
 
-      <QuoteForm/>
-
-
-    </HomeContainer>
-  );
+            {/* <QuoteForm /> */}
+            <ContactForm />
+        </HomeContainer>
+    );
 }

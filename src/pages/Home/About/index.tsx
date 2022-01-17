@@ -4,7 +4,7 @@ import { AboutSectionContainer } from "./style";
 export default function AboutSection() {
   return (
     <AboutSectionContainer>
-      <div className="section-body">
+      <div className="section-body" id="about-section">
         <div className="main-content">
           <img
             className="logo-about"

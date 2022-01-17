@@ -14,9 +14,9 @@ export default function QuoteForm() {
   };
   return (
     <QuoteFormContainer>
-      <div className="form-container">
+      <div className="form-container" id="form-quote">
         <h1>Think we got what you need?</h1>
-        <h2>Request a quote now and we will send you an estimate!</h2>
+        <h2>Tell us a bit about your project and we will send you an estimate!</h2>
 
         <div style={{ height: "60px" }}></div>
 

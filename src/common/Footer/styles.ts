@@ -34,6 +34,7 @@ export const FooterContainer = styled("footer")`
 
   p {
     margin: 5rem;
+    text-align: center;
   }
 
   @media only screen and (max-width: ${MeshdTheme.breakpoints.tablet}) {

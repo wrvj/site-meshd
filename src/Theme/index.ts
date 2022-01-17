@@ -13,6 +13,7 @@ export const MeshdTheme = {
         footerHeight: "600px",
     },
     breakpoints: {
+        large: "1500px",
         desktop: "1200px",
         tablet: "768px",
         mobile: "375px"

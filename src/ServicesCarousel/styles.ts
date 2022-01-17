@@ -1,16 +1,20 @@
 import { styled } from "@mui/material/styles";
 import { MeshdTheme } from "../Theme";
 
-export const CardExpansivelContainer = styled("div")`
+interface iProps {
+  bgImage: string
+}
+
+export const CardExpansivelContainer = styled("div") <iProps>`
   display: flex;
-  @media only screen and (max-width: ${MeshdTheme.breakpoints.tablet}) {
-    flex-direction: column;
-  }
+
   width: 100%;
   height: 850px;
-  background: url('/images/teste_service.jpg');
+  background: url(${props => props.bgImage});
+  transition: background 0.5s ease-in-out;
   background-size: cover;
-  align-items: center;
+  background-position: center;
+  align-items: center; 
   justify-content: center;
   color: white;
   text-align: center;
@@ -20,7 +24,13 @@ export const CardExpansivelContainer = styled("div")`
   -ms-user-select: none;
   user-select: none;
   z-index: -1000;
-
+  
+  @media only screen and (max-width: ${MeshdTheme.breakpoints.tablet}) {
+    padding: 5rem 0;
+    flex-direction: column;
+    height: max-content;
+    margin-bottom: 40vh;
+  }
   .card-expansivel {
     cursor: pointer;
     display: flex;
@@ -29,12 +39,13 @@ export const CardExpansivelContainer = styled("div")`
     justify-content: center;
     background: rgba(30, 30, 30, 0.5);
 
-    margin: 15px;
+    margin: 5px;
     width: 220px;
     height: 280px;
     padding: 15px;
 
     border-radius: 10px;
+    
 
     .title-card {
       color: whitesmoke;

@@ -5,7 +5,9 @@ export const StatementSectionContainer = styled("section")`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 4rem 30px ;
+  margin: 10rem 30px 15rem 30px;
+
+
   .wraper {
     display: flex;
     flex-direction: column;
