@@ -8,6 +8,7 @@ export const ContactFormContainer = styled("section")`
   align-content: center;
   justify-content: center;
   margin: 60px 0;
+  width: 100%;
 
   .form-container {
     position: relative;

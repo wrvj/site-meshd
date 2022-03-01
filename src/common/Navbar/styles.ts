@@ -76,7 +76,7 @@ export const NavbarContainer = styled("nav")`
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           text-decoration: none;
-          font-weight: 500;
+          font-weight: 700;
           font-size: 18px;
           padding: 0;
         }

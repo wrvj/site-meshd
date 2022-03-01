@@ -5,10 +5,12 @@ export const ContactContainer = styled("div")`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: ${MeshdTheme.dimensions.navBarHeight};
+  margin-top: calc(${MeshdTheme.dimensions.navBarHeight} + 30px);
+  width: 100%;
 
   .content {
-    height: 90vh;
+    min-height: 90vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

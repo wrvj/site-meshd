@@ -18,18 +18,22 @@ export default function AboutSection() {
             <h2>Studio</h2>
             <p>
               Meshd is a global creative studio specializing in high-end 3D
-              products and CGI. Our services and products have seen several
-              customers across the globe.
+              products and CGI. We design environments for both the physical and
+              virtual worlds. Our areas of expertise include digital and graphic
+              design, 3D modeling, animation and renderings. We design concepts
+              and solutions that stay true to our clients’ brand culture. Our
+              services and products have seen several customers across the
+              globe.
             </p>
           </div>
-          <div className="work-about">
+          {/* <div className="work-about">
             <h2>Work</h2>
             <p>
               Collaborations are at the core of our philosophy, with streamlined
               services for each client. We ensure that each new brief is set
               with business objectives and creative touch.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </AboutSectionContainer>

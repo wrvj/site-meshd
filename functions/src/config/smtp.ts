@@ -1,6 +1,11 @@
+import * as functions from "firebase-functions";
+
+
+
 module.exports = {
   host: 'smtp.gmail.com',
   port: 587,
-  user: 'meshd.mailer@gmail.com',
-  pass: 'F9850016'
+  user: functions.config().mailer.user,
+  pass: "yyiqrozpzrtqgnxa"
+  // pass: functions.config().mailer.pass
 }
