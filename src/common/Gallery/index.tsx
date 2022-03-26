@@ -52,7 +52,7 @@ export default function ImageGallery() {
                                 src={`${item.img}`}
                                 srcSet={`${item.img}`}
                                 alt={item.title}
-                                loading="lazy"
+                                loading="eager"
                             />
                             {/* <ImageListItemBar position="below" title={item.title} /> */}
                         </ImageListItem>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { HomeContainer } from "./styles";
 import ImageGallery from "../../common/Gallery";
-import ServicesCarousel from "../../ServicesCarousel";
+import ServicesCarousel from "./ServicesCarousel";
 import AboutSection from "./About";
 import StatementSection from "./Statement";
 import QuoteForm from "../../common/QuoteForm";

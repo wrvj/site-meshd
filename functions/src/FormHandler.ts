@@ -1,6 +1,11 @@
 import * as functions from "firebase-functions";
 import * as nodemailer from 'nodemailer';
 import axios from 'axios';
+import { generateNewToken } from "./ValidationToken";
+import { saveNewFormData } from "./SaveData";
+import { initializeApp } from 'firebase-admin/app';
+
+initializeApp();
 
 const SMTP_CONFIG = require('./config/smtp');
 
@@ -18,7 +23,13 @@ const transporter = nodemailer.createTransport({
 });
 
 interface iFormData {
-  text: string;
+  email: string;
+  name: string;
+  company: string;
+  fileFormats: any;
+  services: any;
+  description: string;
+  variations: string;
   reToken: string;
 }
 
@@ -32,20 +43,18 @@ export default async function handleFormRequest(req: any, res: any) {
     return res.status(400).send({ error: "You are not a human!" });
   }
 
+  const requestId: string = await generateNewToken(formData.email);
 
-
-  functions.logger.info(req.body, {
-    structuredData: true,
-  });
-
-  const mailSent = await transporter.sendMail({
-    text: formData.text,
-    subject: "Contact form",
+  await transporter.sendMail({
+    text: JSON.stringify(formData),
+    subject: "Contact form - " + requestId,
     from: 'Meshd Web <meshd.mailer@gmail.com>',
-    to: ['wiljunior33@gmail.com'],
+    to: ['wiljunior33@gmail.com', 'contact@studiomeshd.com', 'monica@meshd.xyz', 'monica.yanhwa@gmail.com'],
   })
 
-  return res.status(200).send({ message: "Deu certo, por hoje.", mail: mailSent });
+  saveNewFormData(formData);
+
+  return res.status(200).send({ message: "Form successfully submited",  validationToken: requestId });
 }
 
 async function validateHuman(reToken: string): Promise<boolean> {

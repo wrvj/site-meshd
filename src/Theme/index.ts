@@ -9,7 +9,7 @@ export const MeshdTheme = {
     },
     dimensions: {
         maxColumnWidth: "1024px",
-        navBarHeight: "65px",
+        navBarHeight: "80px",
         footerHeight: "600px",
     },
     breakpoints: {

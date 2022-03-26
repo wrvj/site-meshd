@@ -7,7 +7,7 @@ export const NavbarContainer = styled("nav")`
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@ export const NavbarContainer = styled("nav")`
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(10px);
-    //background-color: rgba(0, 0, 0, 0.75);
+    //background-color: rgba(0, 0, 0, 0.85);
   }
   .content {
     width: 100%;
@@ -43,9 +43,9 @@ export const NavbarContainer = styled("nav")`
       line-height: 1;
     }
     .logo {
-      width: 40px;
-      height: 40px;
-      margin: 12px 24px;
+      width: auto;
+      height: 50px;
+      margin-left: 50px;
     }
 
     .hamburger {
@@ -69,7 +69,7 @@ export const NavbarContainer = styled("nav")`
       display: flex;
 
       li {
-        margin-right: 60px;
+        margin-right: 70px;
         .link {
           background: #fff; 
           background-clip: text;
@@ -77,7 +77,7 @@ export const NavbarContainer = styled("nav")`
           -webkit-text-fill-color: transparent;
           text-decoration: none;
           font-weight: 700;
-          font-size: 18px;
+          font-size: 20px;
           padding: 0;
         }
 
@@ -92,7 +92,12 @@ export const NavbarContainer = styled("nav")`
     @media only screen and (max-width: ${MeshdTheme.breakpoints.tablet}) {
       flex-direction: column;
       justify-content: center;
-      height: auto;
+      min-height: ${MeshdTheme.dimensions.navBarHeight};
+      .logo {
+      width: auto;
+      height: 50px;
+      margin-left: 24px;
+    }
       .hamburger {
         display: flex;
         width: 40px;
