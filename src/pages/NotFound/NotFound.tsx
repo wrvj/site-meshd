@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "@emotion/styled";
+import {styled} from "@mui/system";
 import { MeshdTheme } from "../../Theme";
 
 export default function NotFound() {
@@ -19,7 +19,7 @@ export default function NotFound() {
   );
 }
 
-const StyledNotFound = styled.div`
+const StyledNotFound = styled('div')`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,12 +33,12 @@ const StyledNotFound = styled.div`
   text-align: center;
   h1 {
     font-size: 5rem;
-    font-weight: 300;
+    font-weight: bold;
     margin-bottom: 1rem;
   }
   p {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 700;
     margin-bottom: 1rem;
   }
   a {

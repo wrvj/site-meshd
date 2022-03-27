@@ -1,3 +1,5 @@
+import createTheme from "@mui/material/styles/createTheme";
+
 export const MeshdTheme = {
     colors: {
         red: "#f26b6b",
@@ -19,3 +21,18 @@ export const MeshdTheme = {
         mobile: "375px"
     }
 }
+
+export const MeshdMUITheme = createTheme({
+    palette: {
+        mode: "dark",
+        primary: {
+            main: "#1766ab",
+        },
+        secondary: {
+            main: "#41BA91"
+        },
+        error: {
+            main: "#f26b6b"
+        },
+    },
+});

@@ -5,6 +5,8 @@ import {
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  updateProfile,
+  updatePassword,
 } from "firebase/auth";
 
 
@@ -34,8 +36,8 @@ export function AuthProvider({ children }: any) {
     return auth.signOut();
   }
 
-  function updatePassword(password: string) {
-    return currentUser?.updatePassword(password);
+  function updateUserProfile(newUser: any, profile: any) {
+    return updateProfile(auth.currentUser!, profile);
   }
 
   useEffect(() => {
@@ -52,6 +54,7 @@ export function AuthProvider({ children }: any) {
     signup,
     login,
     logout,
+    updateUserProfile,
     updatePassword,
   };
   return (

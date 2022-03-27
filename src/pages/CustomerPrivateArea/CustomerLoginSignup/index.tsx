@@ -125,7 +125,7 @@ function CustomerLogin({ setOption, setMessage }: any) {
 
 function CustomerSignup({ setOption, setMessage }: any) {
   const formRef = useRef<FormHandles>(null);
-  const { signup }: any = useAuth();
+  const { signup, updateUserProfile }: any = useAuth();
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -153,7 +153,12 @@ function CustomerSignup({ setOption, setMessage }: any) {
         abortEarly: false,
       });
 
-      await signup(data.email, data.password);
+      const newUser = await signup(data.email, data.password);
+
+      updateUserProfile(newUser, {
+        displayName: data.name,
+      });
+
       setLoading(false);
       setOption("login");
     } catch (err) {

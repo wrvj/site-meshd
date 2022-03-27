@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
+import {styled} from "@mui/system";
 import { MeshdTheme } from "../../../Theme";
 
 
-export const LoginSignupContainer = styled.div`
+export const LoginSignupContainer = styled('div')`
 
     display: flex;
     flex-direction: column;
